@@ -1,0 +1,39 @@
+{
+  "name": "f-matches",
+  "version": "1.0.0",
+  "description": "Composable version of Lodash.matches()",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint source.js",
+    "prepublish": "babel matches.js --out-file index.js"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "files": [
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nene/f-matches"
+  },
+  "keywords": [
+    "lodash",
+    "utility",
+    "pattern-matching"
+  ],
+  "author": "Rene Saarsoo <nene@triin.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nene/f-matches/issues"
+  },
+  "homepage": "https://github.com/nene/f-matches",
+  "dependencies": {
+    "lodash": "^4.17.5"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.19.1"
+  }
+}
