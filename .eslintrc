@@ -4,6 +4,7 @@
     "sourceType": "module"
   },
   "env": {
+    "mocha": true,
     "node": true,
     "es6": true
   },
@@ -141,8 +142,6 @@
     "no-sequences": 2,
     // disallow unmodified conditions of loops
     "no-unmodified-loop-condition": 2,
-    // disallow usage of expressions in statement position
-    "no-unused-expressions": 2,
     // disallow unnecessary .call() and .apply()
     "no-useless-call": 2,
     // disallow unnecessary concatenation of literals or template literals
@@ -237,8 +236,6 @@
     "operator-linebreak": 2,
     // disallow empty lines at the beginning and end of blocks
     "padded-blocks": [2, "never"],
-    // require use of 'single-quotes'
-    "quotes": [2, "single"],
     // require semicolons
     "semi": 2,
     // enforce no space before; and space after semicolons

@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint source.js",
+    "test": "mocha --compilers js:babel-register test.js",
     "prepublish": "babel matches.js --out-file index.js"
   },
   "engines": {
@@ -34,6 +35,9 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
-    "eslint": "^4.19.1"
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "eslint": "^4.19.1",
+    "mocha": "^5.0.5"
   }
 }
