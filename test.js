@@ -1,5 +1,5 @@
 import {expect} from "chai";
-import {matches, matchesLength, extract} from "./matches.js";
+import {matches, matchesLength, extract, extractAny} from "./matches.js";
 
 // Function for matching string literal
 const isStringLiteral = matches({
@@ -93,6 +93,23 @@ describe("f-matches", () => {
         "value": "./foo.js",
         "raw": '"./foo.js"',
       }
+    });
+  });
+
+  describe("extractAny", () => {
+    const matchesFoo = matches({
+      foo: extractAny("myFoo"),
+    });
+
+    it("extracts any value", () => {
+      expect(matchesFoo({foo: 0})).to.deep.equal({"myFoo": 0});
+      expect(matchesFoo({foo: "blah"})).to.deep.equal({"myFoo": "blah"});
+      expect(matchesFoo({foo: []})).to.deep.equal({"myFoo": []});
+      expect(matchesFoo({foo: {}})).to.deep.equal({"myFoo": {}});
+    });
+
+    it("only fails when outer match fails", () => {
+      expect(matchesFoo({bar: 123})).to.deep.equal(false);
     });
   });
 

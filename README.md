@@ -2,10 +2,11 @@
 
 An utility used by [Lebab][] for complex matching of AST nodes.
 
-The package exports 3 curried functions:
+The package exports 4 curried functions:
 
 - `matches :: Pattern -> Obj -> (Bool|Obj)`
-- `extract :: Pattern -> Obj -> (Bool|Obj)`
+- `extract :: Name -> Pattern -> Obj -> (Bool|Obj)`
+- `extractAny :: Name -> Obj -> (Bool|Obj)`
 - `matchesLength :: Pattern -> Array -> (Bool|Obj)`
 
 For details, just read the source, it's really small.

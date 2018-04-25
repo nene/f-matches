@@ -64,6 +64,16 @@ export const extract = curry((fieldName, matcher, obj) => {
 });
 
 /**
+ * Like extract, but does not take the matcher argument,
+ * matching anything instead.
+ *
+ * @param {String} fieldName The name to give for the value.
+ * @param {Object} obj The object to be tested and captured.
+ * @return {Boolean|Object} False when no match found.
+ */
+export const extractAny = curry((fieldName, obj) => extract(fieldName, undefined, obj));
+
+/**
  * Utility for asserting that two arrays match,
  * and their length also equals.
  * (in addition to the normal behavior of matches()
